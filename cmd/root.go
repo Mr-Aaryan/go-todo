@@ -26,8 +26,8 @@ examples and usage of using your application.`,
 			fmt.Printf("No todo available")
 		}
 		fmt.Println("Your Todos:")
-		for _, todo := range todos {
-			fmt.Printf("%d. %s\n", todo.Id, todo.Title)
+		for i, todo := range todos {
+			fmt.Printf("%d. %s\n", i+1, todo.Title)
 		}
  },
 }
