@@ -24,12 +24,13 @@ examples and usage of using your application.`,
 		todos = database.ReadDB()
 		if len(todos) < 1 {
 			fmt.Printf("No todo available")
+		} else {
+			fmt.Println("Your Todos:")
 		}
-		fmt.Println("Your Todos:")
 		for i, todo := range todos {
 			fmt.Printf("%d. %s\n", i+1, todo.Title)
 		}
- },
+	},
 }
 
 func Execute() {
@@ -50,5 +51,3 @@ func init() {
 	// when this action is called directly.
 	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }
-
-
